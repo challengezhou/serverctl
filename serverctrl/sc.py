@@ -41,7 +41,7 @@ def start(file):
         filename = os.path.basename(abspath)
         cwd = os.path.dirname(abspath)
         click.echo("Start the project:%s" % abspath)
-        start_cmd = "cd %s && nohup java -jar %s --spring.profiles.active=prod >/dev/null 2>&1 &" % (cwd, filename)
+        start_cmd = "cd %s && nohup java -jar %s --spring.profiles.active=prod > javastdout 2>&1 &" % (cwd, filename)
     else:
         if not os.path.isdir(file):
             click.echo("Please give a path")
