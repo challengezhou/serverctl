@@ -18,7 +18,7 @@ config = {}
 
 
 @click.group()
-@click.option("--log/--no-log", "-l/-n", is_flag=True, default=True, help="Does show log? default true")
+@click.option("--log/--no-log", "-l/-n", is_flag=True, default=True, help="show log? default true")
 @click.option("--signal", "-s", default=9, type=int,
               help="Send the SIGNAL to the process of server,Default use SIGKILL(9)")
 @click.option("--jetty", "-j", is_flag=True, default=False, help="Is jetty mode? default False")
@@ -124,7 +124,7 @@ def get_start_cmd_by_pid(pid):
 
 def kill_by_pid(pid):
     kill_cmd = "kill -%s %s" % (config["signal"], pid)
-    click.echo("The pid:%d will be stop" % int(pid))
+    click.echo("The pid:%d will be stoped" % int(pid))
     os.system(kill_cmd)
 
 
