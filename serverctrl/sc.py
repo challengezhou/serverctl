@@ -124,7 +124,7 @@ def get_start_cmd_by_pid(pid):
 
 def kill_by_pid(pid):
     kill_cmd = "kill -%s %s" % (config["signal"], pid)
-    click.echo("The pid:%d will be stoped" % int(pid))
+    click.echo("The pid:%d will be stopped" % int(pid))
     os.system(kill_cmd)
 
 
